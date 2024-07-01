@@ -6,8 +6,3 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lmodroid_renoir.mk
-
-COMMON_LUNCH_CHOICES := \
-    lmodroid_renoir-user \
-    lmodroid_renoir-userdebug \
-    lmodroid_renoir-eng
