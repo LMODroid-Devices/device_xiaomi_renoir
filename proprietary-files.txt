@@ -93,7 +93,7 @@ vendor/lib/libqtigef.so
 vendor/lib/libresampler.so
 vendor/lib/libsndmonitor.so
 vendor/lib/libssrec.so
-vendor/lib/libvideoNS.so
+vendor/lib/libvideoNS.so;DISABLE_CHECKELF
 
 # Camera
 vendor/etc/camera/CFR_para_MACRO_V01.bin
@@ -322,24 +322,25 @@ vendor/lib64/libSNPE.so
 vendor/lib64/lib_sr_models.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libaidenoiserv2.so
-vendor/lib64/libalAILDC.so
+vendor/lib64/libalAILDC.so;DISABLE_CHECKELF
 vendor/lib64/libalCFR.so
-vendor/lib64/libalLDC.so
-vendor/lib64/libalhLDC.so
+vendor/lib64/libalLDC.so;DISABLE_CHECKELF
+vendor/lib64/libalhLDC.so;DISABLE_CHECKELF
 vendor/lib64/libanc_dc_base.so
-vendor/lib64/libanc_dc_plugin_xiaomi_v2.so
+vendor/lib64/libanc_dc_plugin_xiaomi_v2.so;DISABLE_CHECKELF
 vendor/lib64/libanc_hdr.so
 vendor/lib64/libancbase.so
 vendor/lib64/libarcsoft_beautyshot.so
 vendor/lib64/libarcsoft_bodyslim.so
 vendor/lib64/libarcsoft_distortion_correction.so
-vendor/lib64/libarcsoft_hdrplus_hvx_stub.so
+vendor/lib64/libarcsoft_hdrplus_hvx_stub.so;DISABLE_CHECKELF
 vendor/lib64/libarcsoft_portrait_lighting.so
 vendor/lib64/libarcsoft_portrait_lighting_c.so
 vendor/lib64/libarcsoft_qnnhtp.so
-vendor/lib64/libarcsoft_super_night_raw.so
+vendor/lib64/libarcsoft_super_night_raw.so;DISABLE_CHECKELF
 vendor/lib64/libbeauty_face_interface.so
 vendor/lib64/libbitmlengine.so
+vendor/lib64/libbitmlenginev2.so
 vendor/lib64/libblink.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libcamera_dirty.so
@@ -379,8 +380,8 @@ vendor/lib64/libmialgo_ellc.so
 vendor/lib64/libmialgo_ie_capture.so
 vendor/lib64/libmialgo_ie_preview.so
 vendor/lib64/libmialgo_image_colourkeeping.so
-vendor/lib64/libmialgo_pureShot.so
-vendor/lib64/libmialgo_rfs.so
+vendor/lib64/libmialgo_pureShot.so;DISABLE_CHECKELF
+vendor/lib64/libmialgo_rfs.so;DISABLE_CHECKELF
 vendor/lib64/libmialgo_sd.so
 vendor/lib64/libmialgo_utils.so
 vendor/lib64/libmialgo_video_colourkeeping.so
@@ -394,7 +395,7 @@ vendor/lib64/libmiphone_preview_bokeh.so
 vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libmmcamera_bestats.so
 vendor/lib64/libmmcamera_cac3.so
-vendor/lib64/libmmcamera_faceproc.so
+vendor/lib64/libmmcamera_faceproc.so;DISABLE_CHECKELF
 vendor/lib64/libmmcamera_faceproc2.so
 vendor/lib64/libmmcamera_lscv35.so
 vendor/lib64/libmmcamera_mfnr.so
@@ -407,7 +408,7 @@ vendor/lib64/libopencv.so
 vendor/lib64/libopestriping.so
 vendor/lib64/libos.so
 vendor/lib64/libqll10.so
-vendor/lib64/libqllengine.so
+vendor/lib64/libqllengine.so;DISABLE_CHECKELF
 vendor/lib64/librelight_only.so
 vendor/lib64/libremosaic_wrapper.so
 vendor/lib64/libremosaiclib.so
@@ -493,7 +494,7 @@ vendor/etc/qdcm_calib_data_xiaomi_36_02_0a_p2_cmd_mode_dsc_dsi_panel.xml
 vendor/etc/qdcm_calib_data_xiaomi_42_02_0b_mp_cmd_mode_dsc_dsi_panel.xml
 
 # Fingerprint
-vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.lahaina.so
+vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.lahaina.so;FIX_SONAME
 
 # Graphics firmware
 vendor/firmware/a660_gmu.bin
@@ -567,6 +568,14 @@ vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-nxp.conf
 vendor/etc/libnfc-nxp_RF.conf:vendor/libnfc-nxp_RF.conf
 
+# Sensors (citsensor)
+vendor/bin/hw/vendor.xiaomi.hardware.citsensorservice@1.1-service
+vendor/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.citsensorservice@1.1-service.xml
+vendor/lib64/hw/vendor.xiaomi.hardware.citsensorservice@1.1-impl.so
+vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so
+vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.1.so
+
 # Sensors
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
@@ -576,7 +585,7 @@ vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/lib64/libnanopb.so
-vendor/lib64/libnotifyaudiohal.so
+vendor/lib64/libnotifyaudiohal.so;FIX_SONAME
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_api.so
